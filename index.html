@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Fishstick</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <section class="panel panel--left">
+        <div class="hero">
+          <img
+            src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80"
+            alt="Glazed fishstick resting on a plank"
+          />
+          <span class="hero__tag">Photoreal inspiration</span>
+        </div>
+        <h1>Animated Fishstick</h1>
+        <p>
+          A crisp, photorealistic fishstick soars through shimmering brine. Glide
+          with grace, dash through brine gates, and keep the batter from soaking
+          in the fiery oil tide.
+        </p>
+        <div class="stat-grid">
+          <div class="stat-card">
+            <p>Score</p>
+            <strong id="score">0</strong>
+          </div>
+          <div class="stat-card">
+            <p>High Score</p>
+            <strong id="highScore">0</strong>
+          </div>
+          <div class="stat-card">
+            <p>Combo</p>
+            <strong id="combo">x1</strong>
+          </div>
+          <div class="stat-card">
+            <p>Peak Combo</p>
+            <strong id="peakCombo">x1</strong>
+          </div>
+        </div>
+        <div class="meters">
+          <div class="meter">
+            <div class="meter__label">Energy</div>
+            <div class="meter__track">
+              <span id="energyBar"></span>
+            </div>
+            <span class="meter__value" id="energy">100</span>
+          </div>
+          <div class="meter meter--tide">
+            <div class="meter__label">Tide Warning</div>
+            <div class="meter__track meter__track--pulse">
+              <span id="tideBar"></span>
+            </div>
+            <span class="meter__value" id="tideCountdown">Calm</span>
+          </div>
+        </div>
+        <ul class="controls">
+          <li><span>Arrow Keys / WASD</span> — Swim</li>
+          <li><span>Space</span> — Dash burst (required for brine gates)</li>
+          <li><span>R</span> — Quick restart</li>
+        </ul>
+        <p class="tip">
+          Build combo multipliers by sipping sparks in quick succession. Dash
+          through golden brine gates for a massive score infusion.
+        </p>
+        <button id="reset">Reset Ocean</button>
+      </section>
+      <section class="panel panel--right">
+        <canvas id="game" width="640" height="400"></canvas>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
